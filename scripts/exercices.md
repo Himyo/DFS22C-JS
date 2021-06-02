@@ -1,4 +1,4 @@
-# Enoncés
+# Exercices 
 
 ## UC First
 > Créez une fonction `ucFirst` qui va prendre un parametre `word` et retourner, si c'est une string, `word` avec la premiere lettre en majuscule. Sinon retourner le texte `Merci de mettre une string valable`.
