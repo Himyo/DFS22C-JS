@@ -16,8 +16,8 @@ document.getElementById('app').appendChild(clock);
 function updateClock() {
     const date = new Date();
     // const formattedDate = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
-    // const formattedDate2 = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds() < 10 ? "0"+date.getSeconds() : date.getSeconds()}`; //Template String
-    const formattedDate3 = `${date.getHours()} : ${date.getMinutes()} : `+ date.getSeconds().toString().padStart(2, "0");
+    // const formattedDate2 = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`; //Template String
+    const formattedDate3 = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds().toString().padStart(2, "0")}`;
     const clock = document.getElementById('myParagraphe');
 
     clock.innerText = formattedDate3;
@@ -30,11 +30,10 @@ updateClock();
 window.setInterval(updateClock, 1000);
 
 // EventListener example
-const button = document.createElement('span');
+const button = document.createElement('button');
 button.innerText = "Hellooooooo";
 
-button.addEventListener('click', (event) => {
-    console.log(event);
+button.addEventListener('click', () => {
     clock.style.color = "red"
 })
 document.getElementById('app').appendChild(button);

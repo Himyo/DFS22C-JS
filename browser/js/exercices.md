@@ -7,7 +7,7 @@
 > - Créez un paragraphe dans votre fichier HTML. 
 > - Récupérez l’heure et l’afficher au format `“H:m:s”` dans ce paragraphe.
 > - Chaque seconde, mettre l’affichage de l’heure à jour. 
-> - Lorsque les secondes sont un `multiple de 10`, afficher l’heure en bleu
+> - Lorsque les secondes sont un `multiple de 5`, afficher l’heure en bleu
 > - Ajouter trois boutons `précédent`, `suivant` et `stop`
 >> `suivant` nous fera changer de timezone (choisissez en trois) `précédent` nous fera revenir a la timezone précédente `stop` va arreter l’horloge
 
