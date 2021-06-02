@@ -92,6 +92,51 @@ console.log(propAccess(farm, "animal.bonus.3")) // "No at least 7"
 
 ```
 
+## typeCheckV1
+> Créez une fonction `typeCheckV1` qui va prendre en entrer deux parametres `value` et `type`. Retourner `true` si les types correspondent, `false` sinon.
+```js
+function typeCheckV1(value, type) {
+    // TODO
+}
+console.log(typeCheckV1(1, 'number')); // true
+console.log(typeCheckV1(undefined, 'undefined')); // true
+console.log(typeCheckV1(null, 'object')); // true
+```
+
+## typeCheckV2
+> Créez une fonction `typeCheckV2` qui va prendre en entrer deux parametres `value` et `config`.`config` va être un object de conf a verifier de tel que:
+```json
+{
+    "type": String // Le type de value,
+    "value": ... // la valeur de value,
+    "enum": Array // les valuers possible de value
+}
+```
+```js
+function typeCheckV2(value, type) {
+    // TODO
+}
+console.log(type_check_v2({prop1:1}, {type:"object"})); //true
+console.log(type_check_v2("foo", {type:"string", value:"foo"})) //true
+console.log(type_check_v2("bar", {type:"string", value:"foo"})) //false
+console.log(type_check_v2(3, {enum: ["foo", "bar", 3]})) //true
+
+```
+
+## typeCheck
+> Créez une function `typeCheck` qui va pouvoir gérer une conf recursivement, exemple:
+```json
+{
+    type: "object",
+    properties: {
+        prop1: { type: "number" },
+        prop2: { type: "string", enum: ["val1", "val2"] },
+        prop3: { type: "object", properties: { prop31: "number"} },   
+        prop4: { type: "array", properties: [ "boolean"] }
+    }
+}
+```
+
 ## Automate
 > Créez une fonction `automate` qui va prendre en parametre un array d'objet `scripts` chaque objet sera défini de tel que:
 ```json
