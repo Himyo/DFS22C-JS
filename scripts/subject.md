@@ -91,3 +91,14 @@ console.log(propAccess(farm, "animal.affiliation.name")) // "animal.affiliation 
 console.log(propAccess(farm, "animal.bonus.3")) // "No at least 7" 
 
 ```
+
+## Automate
+> Créez une fonction `automate` qui va prendre en parametre un array d'objet `scripts` chaque objet sera défini de tel que:
+```json
+{
+    "function": Function,
+    "toTest": Array,
+    "expectedResult": Array
+}
+```
+> Retourner le nom de la fonction, la/les valeurs tester, ainsi que le resultat. Si le resultat est différent de celui attendu afficher le resultat attendu.
