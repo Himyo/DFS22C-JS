@@ -1,42 +1,53 @@
-function validateForm() {
-    validateName();
-    validateEmail();
-    validateTel();
-    validateMdp();
-}
 
-function validateName() {
-    const nom = document.forms["forms1"]["nom"].value;
-    const prenom = document.forms["forms1"]["prenom"].value;
-    if(nom === "" && prenom === "" ) {
-        alert("nom ou prénom pas remplie");
-        return false;
-    }
-}
+window.addEventListener('DOMContentLoaded', () => {
+    function validateForm(form) {
+        const { nom, prenom, mail, tel, mdp } = form;
+        // const nom = form.nom
 
-function validateEmail() {
-    const mail = document.forms["forms1"]["mail"].value;
-    const mailformat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-    if(!mail.match(mailformat)) {
-        alert("mail invalide");
-        return false;
+        validateName(nom);
+        validateName(prenom);
+        validateEmail(mail);
+        validateTel(tel);
+        validateMdp(mdp);
     }
-}
 
-function validateTel() {
-    const tel = document.forms["forms1"]["tel"].value;
-    const telformat = /^\d+$/;
-    if(tel.toString().length !== 10 || !tel.match(telformat)) {
-        alert("téléphone non conforme");
-        return false;
+    function validateName(nom) {
+        if(nom.value === "") {
+            alert("nom ou prénom pas remplie");
+            return false;
+        }
+        console.log(nom.name, nom.value)
     }
-}
 
-function validateMdp() {
-    const mdp = document.forms["forms1"]["mdp"].value;
-    const mdpformat = [a-zA-Z]+/\d/g;
-    if(mdp.toString().length > 8 && !mdp.match(mdpformat)) {
-        alert("mdp non conforme");
-        return false;
+    function validateEmail(mail) {
+        const mailformat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+        if(!mail.value.match(mailformat)) {
+            alert("mail invalide");
+            return false;
+        }
+        console.log(mail.name, mail.value)
     }
-}
+
+    function validateTel(tel) {
+        const telformat = /^\d+$/;
+        if(tel.value.toString().length !== 10 || !tel.value.match(telformat)) {
+            alert("téléphone non conforme");
+            return false;
+        }
+        console.log(tel.name, tel.value)
+    }
+
+    function validateMdp(mdp) {
+        const mdpformat = /[0-9A-Za-z.@]+:[0-z]+/g;
+        if(mdp.value.toString().length > 8 && !mdp.match(mdpformat)) {
+            alert("mdp non conforme");
+            return false;
+        }
+        console.log(mdp.name, mdp.value)
+    }
+
+    document.querySelector('button').addEventListener('click', () => {
+        const form = document.forms['form'];
+        validateForm(form);
+    });
+});
