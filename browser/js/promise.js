@@ -1,6 +1,7 @@
 
 export function testPromise() {
     console.log('1');
+
     const mypromise = new Promise((resolve,reject) => {
         console.log('2');
         setTimeout(() => {
@@ -8,11 +9,14 @@ export function testPromise() {
                 resolve('3')
             }
             reject('autre 3')
-        },Math.random()*2000+1000);
+        },Math.random()*3000);
     })
+
     mypromise.then((value)=>{
         console.log(value)
-    }).catch(err => console.error(err));
+    }).catch(err => console.log(err));
+
+    console.log(mypromise);
     console.log('4');
 }
 

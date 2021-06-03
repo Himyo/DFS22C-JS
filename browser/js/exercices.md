@@ -34,7 +34,22 @@
 > - Créez une fonction testPromise qui va:
 > - Quand elle commence afficher le text  “1”
 > - Créez une Promise qui va dans sa callback afficher le text “2” puis va dans un setTimeout avec un temps aléatoire (Math.random() * 2000 + 1000) resolve “3” 
-> - Utilisez le then sur la Promise créez précédemment pour récupérer la valeur que vous avez résolue et afficher là
+>   - Utilisez le then sur la Promise créez précédemment pour récupérer la valeur que vous avez résolue et afficher là
 > - Avant de finir la fonction afficher le text 4
 > - Avant d'exécuter le code, essayer de deviner l’ordre de sorti  
 
+## Give me some Gif bro
+> - Créez un compte : https://tenor.com/developer/keyregistration
+
+> - Validez votre compte et récupérez votre API KEY
+
+> - Créer un fichier index.html qui contient un formulaire avec 2 champs: un pour du texte et l’autre pour le nombre max de gif à récupérer
+
+> - Depuis un fichier JS, écrire le code pour faire un call API (fetch) sur https://g.tenor.com/v1/search
+>  Vous devez y renseigner plusieurs QueryStrings : 
+>   - q={le terme utilisé pour la recherche}
+>   - key={Votre API KEY}
+>   - limit={le nombre de résultat}
+> - Exemple = https://g.tenor.com/v1/search?q=pikachu&key=87FVZSODBI&limit=10
+
+> - Récupérer les urls des gifs (.gif) et les injecter dans des balises <img> dans votre page HTML

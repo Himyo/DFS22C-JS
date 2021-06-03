@@ -18,3 +18,6 @@ document.getElementById('app').appendChild(button);
 button.addEventListener('click', () => {
     testPromise();
 })
+
+const gifhouse = document.getElementById('gifhouse');
+gifhouse.querySelector('input').forEach(input => {})
