@@ -1,11 +1,9 @@
-// Liste
-let list = document.createElement('ul');
+import * as List from './list.js';
+// import { logStuff, makeList } from './list.js';
 
-for(let i = 1; i <= 10; i++) {
-    let listElement = document.createElement('li');
-    listElement.innerText = i;
-    list.appendChild(listElement);
-}
+List.logStuff();
+const list = List.makeList();
+
 document.getElementById('app').appendChild(list);
 
 // Horloge 
