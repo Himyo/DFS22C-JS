@@ -27,3 +27,14 @@
 > - Email : Doit respecter un format de mail (utiliser une regex)
 > - Téléphone : Uniquement valeur numérique et de longueur maximale de 10
 > - Password : Minimum 8 caractères + 1 caractère spécial (!, ?, #) (utiliser une regex)
+
+## Promise Example
+
+> - Créez un bouton qui va quand il est cliqué exécuter une fonction testPromise
+> - Créez une fonction testPromise qui va:
+> - Quand elle commence afficher le text  “1”
+> - Créez une Promise qui va dans sa callback afficher le text “2” puis va dans un setTimeout avec un temps aléatoire (Math.random() * 2000 + 1000) resolve “3” 
+> - Utilisez le then sur la Promise créez précédemment pour récupérer la valeur que vous avez résolue et afficher là
+> - Avant de finir la fonction afficher le text 4
+> - Avant d'exécuter le code, essayer de deviner l’ordre de sorti  
+
