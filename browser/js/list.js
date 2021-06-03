@@ -1,5 +1,5 @@
 // Liste
-export function makeList() {
+export function getList() {
     let list = document.createElement('ul');
 
     for(let i = 1; i <= 10; i++) {

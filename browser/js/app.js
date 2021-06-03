@@ -1,27 +1,20 @@
 import * as List from './list.js';
+import { getNav } from './navbar.js';
 import { makeHorloge } from './horloge.js';
+import { testPromise } from './promise.js'
 
 List.logStuff();
-const list = List.makeList();
-
-document.getElementById('app').appendChild(list);
-
+const list = List.getList();
+const nav = getNav();
 makeHorloge();
 
-// NavBar
-const nav = document.createElement('nav');
-const ul = document.createElement('ul');
-const navItems = ['Accueil', 'Page 1', 'Page 2', 'Page 3', 'Page 4'];
-
-for(let i = 0 ; i < navItems.length ; i++) {
-    const li = document.createElement('li');
-    li.innerText = navItems[i];
-    ul.appendChild(li);
-    li.addEventListener('click', () => {
-        ul.childNodes.forEach(ulChild => ulChild.style.color = 'black');
-        li.style.color = 'red';
-    });
-}
-nav.appendChild(ul);
+document.getElementById('app').appendChild(list);
 document.getElementById('app').appendChild(nav)
 
+const button = document.createElement('button');
+button.innerText = "prout ! ";
+document.getElementById('app').appendChild(button);
+
+button.addEventListener('click', () => {
+    testPromise();
+})
