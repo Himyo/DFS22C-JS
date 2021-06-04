@@ -22,4 +22,4 @@ export function testPromise() {
 
 // resolve(console.log('3'));
 //ces maudites fenetres ! Exactement !!
-// Comment oses t-elles
+// Comment osent t-elles
