@@ -26,7 +26,7 @@ console.log(palindrome(1)) //Merci de mettre une string valable
 function findLongestWord(sentence) {
     // TODO
 }
-findLongestWord("Le chemin le plus cours n'est pas toujours le meilleur"); // toujours
+console.log(findLongestWord("Le chemin le plus cours n'est pas toujours le meilleur")); // toujours
 ```
 
 ### Merge
@@ -113,4 +113,24 @@ console.log(propAccess(farm, "animal.bonus.3")) // "No at least 7"
     "expectedResult": Array
 }
 ```
-> Retourner le nom de la fonction, la/les valeurs tester, ainsi que le resultat. Si le resultat est différent de celui attendu afficher le resultat attendu.
+
+```js
+function palindrome(word) {}
+
+const myScripts = [
+    {
+        function: palindrome,
+        toTest: ['kayak' , 'noname', 1],
+        expectedResult: [true, false, true]
+    }
+];
+function automate(scripts) {
+    // TODO
+}
+
+automate(myScripts)
+// palindrome, kayak, true
+// palindrome, noname, false 
+// palindrome, 1, 'Merci de mettre une string valable', true
+```
+> Retourner le nom de la fonction, la/les valeurs tester, ainsi que le resultat et si le resultat est différent de celui attendu afficher le resultat attendu.

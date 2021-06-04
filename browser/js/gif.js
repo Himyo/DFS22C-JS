@@ -11,11 +11,4 @@ export async function fetchGif(apiKey = 'AKFDJ3L12EXI') {
         image.src = gif.url
         document.getElementById('app').appendChild(image);
     });
-    // const imagesNode = gifs.map(gif => {
-    //     const image = document.createElement('img');
-    //     image.src = gif.url
-    //     return image
-    // });
-    // document.getElementById('app').appendChild(image);
-
 }

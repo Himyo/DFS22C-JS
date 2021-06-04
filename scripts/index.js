@@ -86,8 +86,8 @@ const leet4 = string => {
     const map = {'A': '4', 'E':'3', 'I':'1', 'O':'0', 'U':'(_)', 'Y':'7'};
     const split = string.split('');
     const res = split.map(char => {
-        const char = char.toUpperCase();
-        return Boolean(map[char]) ? map[char] : char;
+        const uppercaseChar = char.toUpperCase();
+        return Boolean(map[uppercaseChar]) ? map[uppercaseChar] : char;
     });
     return res.join('');
 };
